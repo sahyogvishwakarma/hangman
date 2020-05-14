@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+</head>
+<body onload='resetGame()'>
+	<div id ='introbox'>
+		<center>
+			<h1 style="color: #55ff55;margin-bottom: 40px;">Hangman: The Game</h1>
+			<p>Play individually or in groups. <br><br>
+Have the student select a letter of the alphabet.<br><br>
+If the letter is contained in the word/phrase, the group or individual takes another turn guessing a letter.  To reveal a letter (depending on which slide template is used), either:<br><br>
+Click on the key with appropriate letter in it to reveal the letter within the word/phrase (used with slides 1 and 2)<br><br>
+Click on the letter in the alphabet area which will then trigger the letter to be revealed if it is contained in the word/phrase or change the color of the Try Again button indicating that the letter is not contained in the word/phrase.<br><br>
+If the letter is not contained in the word/phrase,  a portion of the hangman is added. <br><br>
+The game continues until:<br><br>
+the word/phrase is guessed (all letters are revealed) – WINNER or,
+all the parts of the hangman are displayed – LOSER</p><br>
+			<a id='pnow' onclick="intro()" style="visibility: visible;">Play Now</a>
+		</center>
+	</div>
+	<div id='gamebox'>
+	<h1 id='heading'>Hangman</h1>
+	<div id='choicebox'>
+		<p class="c1">Select Type:</p>
+		<hr class='hr1'/>
+		<div id="choice">		
+			<ul>
+				<li><a onclick='newGame(0)'>Sports</a></li>
+				<li><a onclick='newGame(1)'>Countries</a></li>
+				<!-- <li><a onclick='newGame(2)'>Automobiles Companies</a></li> -->
+				<!-- <li><a onclick='javascript:wrd = wordLib[3]'>Movies</a></li> -->
+			</ul>
+		</div>
+	</div>
+	<center>
+		<img src="9.png" class='img' id='hint'>
+		<img src="9.png" class='img' id='hmcan'>
+	</center>
+	<h1 id='wordGame'>JavaScript is NOT Loaded..</h1>
+	<div id="keyboard"><center>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">A</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">B</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">C</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">D</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">E</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">F</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">G</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">H</a>
+		<br>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">I</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">J</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">K</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">L</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">M</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">N</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">O</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">P</a>
+		<br>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">Q</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">R</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">S</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">T</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">U</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">V</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">W</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">X</a>
+		<br>
+		<a class="key bar"onclick="tryNew()">Try New Word</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">Y</a>
+		<a class="key" onclick="letCapt(this.innerHTML,this)">Z</a>
+		<a class="key bar"onclick="resetGame()">Reset Your Game</a>
+		<br>
+	</center></div>
+	<div id='statusBar'>
+		<p class='c1' id='pts'>Points: 0</p>
+		<p class="c1" id='lfs'>Lives: 0</p>
+		<hr class="hr1 hr2" />
+		<p class="c1" id='loss'>Loses: 0</p>
+		<p class="c1" id='wins'>Wins: 0</p>
+		<p class="c1" id='skip'>Skips: 0</p>
+		<hr class='hr1 hr2'>
+		<p id='base'>Click on HANGMAN Title to Reset your Game Anytime</p>
+	</div>
+	</div>
+	<script type="text/javascript" src='hangman.js'></script>
+</body>
+</html>
