@@ -31,14 +31,14 @@ function resetGame(){
 	skips = 0;
 	ele.innerHTML = 'SELECT TYPE TO START YOUR GAME';
 	pele.innerHTML = 'Points: ' + points;
-	himg.src = '9.png';
+	himg.src = 'images\\lifes\\9.png';
 	keyVisibility(0);
 	resetStatus();
 }
 
 ///////////////////////////Reset Image Box/////////////////////////////
 function resetStatus(){
-	imag.src = lifes + '.png';
+	imag.src = "images\\lifes\\" + lifes + '.png';
 	wele.innerHTML = "Wins: " + wins;
 	lele.innerHTML = "Loses: " + loss;
 	lfele.innerHTML = "Lives: " + lifes;
