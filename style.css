@@ -145,7 +145,7 @@ body::-webkit-scrollbar{
 			}
 
 	.img{
-		width: 300px;
+		width: auto;
 		height: auto;
 		vertical-align: middle;
 		border: 2px solid white;
@@ -159,6 +159,8 @@ body::-webkit-scrollbar{
 	}
 
 	#hint{
+		max-height: 300px;
+		max-width: 300px;
 		margin-right: 5px;
 	}
 
