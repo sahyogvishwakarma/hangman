@@ -67,7 +67,7 @@ function newGame(chc){
 	ch=chc;
 	lifes = 9;
 	wrd = wordLib[chc];
-	wrd = wrd[img = Math.floor(Math.random()*wrd.length)];
+	wrd = wrd[img = Math.floor(Math.random() * 9999 * Math.random()) % wrd.length];
 	wrd = wrd.split("");
 	keyVisibility(1);
 	resetStatus(img);
