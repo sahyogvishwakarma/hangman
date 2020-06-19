@@ -39,9 +39,12 @@ body::-webkit-scrollbar{
 
 	#introbox{
 		display: block;
-/*		height: 600px;
-		width: 1360px;*/
+	}
 
+	#introbox div{
+		width: 70%;
+		margin: auto;
+		text-align: center;
 	}
 
 	#gamebox{
